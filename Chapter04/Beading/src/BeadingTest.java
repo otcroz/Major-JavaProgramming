@@ -8,7 +8,7 @@ public class BeadingTest {
 		c1.Beading(c2, 2);
 		c2.Beading(c1, 7);
 		
-		System.out.println("¾î¸°ÀÌ1ÀÇ ±¸½½ °³¼ö: "+ c1.getBead());
-		System.out.println("¾î¸°ÀÌ2ÀÇ ±¸½½ °³¼ö: "+ c2.getBead());
+		System.out.println("ì•„ì´ 1ì˜ êµ¬ìŠ¬ ê°œìˆ˜: "+ c1.getBead());
+		System.out.println("ì•„ì´ 2ì˜ êµ¬ìŠ¬ ê°œìˆ˜: "+ c2.getBead());
 	}
 }

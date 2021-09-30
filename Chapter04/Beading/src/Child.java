@@ -1,15 +1,17 @@
 
 public class Child {
 	private int beadNum;
-
-	// »ı¼ºÀÚ
-	public Child() {}
+	
+	// ìƒì„±ì
+	public Child() {
+		this(0);
+	}
 
 	public Child(int beadNum) {
 		this.beadNum = beadNum;
 	}
 
-	// ¸Ş¼Òµå
+	// ë©”ì„œë“œ
 	public void Beading(Child c, int n) {
 		if (c.beadNum > n) {
 			this.beadNum += n;
