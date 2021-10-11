@@ -44,7 +44,7 @@ public class MathProg {
 
 	public void isAnswerTrue(Student s1) {
 		System.out.println("정답!");
-		s1.CorrectAnswer(1);
+		s1.CorrectAnswer();
 	}
 
 	public void isAnswerFalse() {
@@ -53,7 +53,7 @@ public class MathProg {
 
 	public void disPlayAnswer(Student s1) {
 		System.out.println("정답은 " + calculate(op1, op2) + "입니다.");
-		s1.WrongAnswer(1);
+		s1.WrongAnswer();
 	}
 
 }

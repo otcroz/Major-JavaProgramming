@@ -4,11 +4,11 @@ public class Student {
 	private int correct;
 	private int wrong;
 	
-	public void CorrectAnswer(int n) {
+	public void CorrectAnswer() {
 		this.correct += 1;
 	}
 	
-	public void WrongAnswer(int n) {
+	public void WrongAnswer() {
 		this.wrong += 1;
 	}
 	
