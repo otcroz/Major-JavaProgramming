@@ -1,45 +1,82 @@
 package MathTest;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class MathProg {
-	Random n1 = new Random();
-	Random n2 = new Random();
-	Random op = new Random();
-
-	int op1 = n1.nextInt(10);
-	int op2 = n2.nextInt(10);
-	int operRandom = op.nextInt(2);
+	Random random = new Random();
+	Student s1 = new Student();
+	Scanner inputAns;
+	
+	int operand1;
+	int operand2;
+	char operator;
+	int chance;
+	int answer;
 	
 	// 메서드
-	public void setOperand(int n1, int n2) {
-		op1 = n1;
-		op2 = n2;
+	public void startQuestion(){
+		for (int i=0;i<10;i++) {
+			setCalculate();
+			System.out.println("*** " + (i + 1) + "번째 문제 ***");
+			chance = 3;
+			while(true) {
+				if (chance <= 0) {
+					disPlayAnswer(s1);
+					break;
+				}
+				else {
+					int userAns = solveAnswer();
+					if(isAnswer(userAns)) {
+						isAnswerTrue(s1);
+						break;
+					}
+					else 
+						isAnswerFalse();
+				}
+				chance--;
+			}
+		}
+		s1.showResult();
+	}
+	
+	public void setCalculate() {
+		int op1 = random.nextInt(10);
+		int op2 = random.nextInt(10);
+		
+		operand1 = op1;
+		operand2 = op2;
+		
+		if (random.nextInt(2)==0) {
+			operator = '+';
+			answer = op1 + op2;
+		}
+		else {
+			operator = '-';
+			answer = op1 - op2;
+		}
 	}
 	
 	public void randomQuestion() {
-		if (operRandom == 0)
-			System.out.print(op1 + "+" + op2 + ">>");
+		if (operator == '+')
+			System.out.print(operand1 + "+" + operand2 + ">>");
 		else
-			System.out.print(op1 + "-" + op2 + ">>");
+			System.out.print(operand1 + "-" + operand2 + ">>");
+	}
+	
+	public int solveAnswer() {
+		randomQuestion(); //문제 출력
+		inputAns = new Scanner(System.in);
+		int userAns = inputAns.nextInt();
+		
+		return userAns;
 	}
 
-	public int calculate(int op1, int op2) {
-		int res;
-		if (operRandom == 0)
-			res = op1 + op2;
+	public boolean isAnswer(int inputAns) {
+		if (inputAns == answer)
+			return true;
 		else
-			res = op1 - op2;
-		return res;
-	}
-
-	public boolean isAnswer(int ans) {
-		boolean res;
-		if (ans == calculate(op1, op2))
-			res = true;
-		else
-			res = false;
-		return res;
+			return false;
 	}
 
 	public void isAnswerTrue(Student s1) {
@@ -52,7 +89,7 @@ public class MathProg {
 	}
 
 	public void disPlayAnswer(Student s1) {
-		System.out.println("정답은 " + calculate(op1, op2) + "입니다.");
+		System.out.println("정답은 " + answer + "입니다.");
 		s1.WrongAnswer();
 	}
 
