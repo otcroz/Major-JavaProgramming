@@ -4,12 +4,9 @@ public class Student {
 	private String name;
 	private int age;
 	
-	public void WhatYourName() {
-		System.out.println("이름: " + name);
-	}
-	
-	public void HowOlderYou() {
-		System.out.println("나이: " + age);
+	public Student(String s , int a) {
+		name = s;
+		age = a;
 	}
 	
 	public String getName() {
@@ -26,5 +23,10 @@ public class Student {
 	
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	public void introduce() {
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
 	}
 }
