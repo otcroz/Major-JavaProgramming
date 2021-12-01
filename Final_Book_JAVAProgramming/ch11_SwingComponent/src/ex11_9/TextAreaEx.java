@@ -39,6 +39,7 @@ public class TextAreaEx {
 			}
 			
 		});
+		
 		panel.add(label);
 		panel.add(field);
 		panel.add(area);
