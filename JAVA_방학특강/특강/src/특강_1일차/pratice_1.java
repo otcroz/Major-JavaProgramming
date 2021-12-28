@@ -1,4 +1,4 @@
-package Æ¯°­_1ÀÏÂ÷;
+package íŠ¹ê°•_1ì¼ì°¨;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -30,7 +30,7 @@ public class pratice_1 {
 	private void buildGUI() {
 		frame.add(createCardPanel());
 		
-		JButton btn = new JButton("¸¶Áö¸·");
+		JButton btn = new JButton("ë§ˆì§€ë§‰");
 		frame.add(btn, BorderLayout.SOUTH);
 		
 		btn.addActionListener(new ActionListener() {
