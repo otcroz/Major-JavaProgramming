@@ -1,4 +1,4 @@
-package ∆Ø∞≠_2¿œ¬˜;
+package ÌäπÍ∞ï_2ÏùºÏ∞®;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +19,7 @@ public class JComboBoxEx {
 	private JComboBox<String> comboBox_list;
 	private JTextField textfield;
 	private JButton[] buttons = new JButton[2];
-	private String[] btn_str = {"√ﬂ∞°", "ªË¡¶"};
+	private String[] btn_str = {"Ï∂îÍ∞Ä", "ÏÇ≠Ï†ú"};
 	
 	public JComboBoxEx() {
 		frame = new JFrame("JComboBox Test1");
@@ -71,7 +71,7 @@ public class JComboBoxEx {
 		public void actionPerformed(ActionEvent e) {
 			String addFruits = textfield.getText();
 			
-			if(e.getActionCommand()=="√ﬂ∞°") {
+			if(e.getActionCommand()=="Ï∂îÍ∞Ä") {
 				
 				comboBox_list.addItem(addFruits);
 				textfield.setText("");

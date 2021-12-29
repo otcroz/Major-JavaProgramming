@@ -1,4 +1,4 @@
-package ∆Ø∞≠_2¿œ¬˜;
+package ÌäπÍ∞ï_2ÏùºÏ∞®;
 
 import java.awt.BorderLayout;
 import java.awt.event.ItemEvent;
@@ -16,7 +16,7 @@ public class CheckbocArray {
 	private JFrame frame;
 	
 	public CheckbocArray() {
-		frame = new JFrame("JCheckBox øπ¡¶");
+		frame = new JFrame("JCheckBox ÏòàÏ†ú");
 		frame.setSize(350, 200);
 		
 		buildGUI();
@@ -48,9 +48,9 @@ public class CheckbocArray {
 			String s = check.getText();
 			
 			if(e.getStateChange() == ItemEvent.SELECTED)
-				s += " º±≈√";
+				s += " ÏÑ†ÌÉù";
 			else
-				s += " «ÿ¡¶";
+				s += " Ìï¥Ï†ú";
 			
 			textarea.append(s + "\n");
 			
@@ -62,7 +62,7 @@ public class CheckbocArray {
 		JPanel panel = new JPanel();
 		
 		for(int i=0;i<5;i++) {
-			checkbox[i] = new JCheckBox("«◊∏Ò" + (i+1));
+			checkbox[i] = new JCheckBox("Ìï≠Î™©" + (i+1));
 			panel.add(checkbox[i]);
 		}
 		
